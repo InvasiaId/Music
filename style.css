@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Karantina:wght@300;400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+    min-height: 100vh;
+    margin: 0;
+    font-family: Poppins;
+    color: #1C1D21;
+    background-color: #F2F2F2;
+    background-image: url(/Assets/BG.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+.banner .slider{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 15%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateX(-12deg) rotateY(0deg);
+    transition: transform 0.5s ease-in-out;
+    /* animation: autoRun 20s linear infinite; */
+}
+
+
+@keyframes autoRun{
+    from{
+        transform: perspective(1000px) rotateX(-10deg) rotateY(0deg);
+    }
+    to{
+        transform: perspective(1000px) rotateX(-10deg) rotateY(360deg);
+    }
+}
+
+.banner .slider .item{
+    position: absolute;
+    inset: 0 0 0 0;
+    transform:
+        rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg)) 
+        translateZ(400px);
+}
+
+.banner .slider .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.music-ui {
+    position: absolute;
+    top: 76%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    z-index: 3; /* Agar berada di belakang slider */
+}
+
+/* Piringan hitam */
+.vinyl {
+    position: absolute;
+    z-index: -1;
+    width: 400px;
+    left: 20%;
+    transform: translateY(0px);
+    transition: transform 0.5s ease-in-out;
+    user-select: none;
+}
+
+/* Music player */
+.player {
+    position: absolute;
+    z-index: 1;
+    background: rgba(12, 12, 12, 0.85); 
+    backdrop-filter: blur(10px);
+    box-shadow: inset 2px 2px 10px rgba(255, 255, 255, 0.5);
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+    width: 500px;
+    height: 300px;
+    margin: 15px auto;
+    
+}
+
+.left, .right{
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background: rgba(12, 12, 12, 0.85); 
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    top: 10%;
+}
+
+.left{
+    left: -8%;
+    box-shadow: inset 2px 2px 10px rgba(255, 255, 255, 0.5);
+}
+
+.right{
+    right: -8%;
+    box-shadow: inset -2px 2px 10px rgba(255, 255, 255, 0.5);
+}
+
+.right img{
+    margin-top: 30px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.love-icon {
+    margin-top: 20px;
+    font-size: 54px;
+    cursor: pointer;
+    color: #F2F2F2;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+.love-icon.loved {
+    color: red; /* Warna merah ketika disukai */
+    animation: pulse 0.3s ease;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+
+.player h2 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.player p {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.controls {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    padding: 10px;
+}
+
+.btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    
+    <div class="banner">
+        <div class="music-ui">
+            <img src="assets/vinly.png" class="vinyl" alt="">
+            <div class="player">
+                <h2>Title Music</h2>
+                <p>Nama penyanyi - feat</p>
+                <div class="controls">
+                    <button class="btn prev">⏮</button>
+                    <button class="btn play">⏯</button>
+                    <button class="btn next">⏭</button>
+                </div>
+                <div class="left">
+                    <i class="fa-solid fa-heart love-icon love"></i>
+                </div>
+                <div class="right">
+                    <img id="soundToggle" src="assets/soundAsset 3.png" alt="">
+                </div>
+            </div>
+        </div>
+    
+        <div class="slider" style="--quantity: 10">
+            <div class="item" style="--position: 1" data-audio="music/song 1.mp3" data-title = "You(=I)" data-artist ="BOL4(볼빨간사춘기)"><img src="album/album 1.jpg" alt=""></div>
+            <div class="item" style="--position: 2" data-audio="music/song 2.mp3" data-title = "Just Sunny To You" data-artist ="Yoroshika"><img src="album/album 2.jpg" alt=""></div>
+            <div class="item" style="--position: 3" data-audio="music/song 3.mp3" data-title = "Waiting For Love" data-artist ="Avicii"><img src="album/album 3.jpg" alt=""></div>
+            <div class="item" style="--position: 4" data-audio="music/song 4.mp3" data-title = "Look At Me" data-artist ="TWICE"><img src="album/album 4.jpg" alt=""></div>
+            <div class="item" style="--position: 5" data-audio="music/song 5.mp3" data-title = "Gyutto" data-artist ="Mosawo"><img src="album/album 5.jpg" alt=""></div>
+            <div class="item" style="--position: 6" data-audio="music/song 6.mp3" data-title = "Tabun (たぶん)" data-artist ="Yoasobi"><img src="album/album 6.jpg" alt=""></div>
+            <div class="item" style="--position: 7" data-audio="music/song 7.mp3" data-title = "Sunflower" data-artist ="Post Malone, Swae Lee "><img src="album/album 7.jpg" alt=""></div>
+            <div class="item" style="--position: 8" data-audio="music/song 8.mp3" data-title = "Can I Be Him" data-artist ="James Arthur"><img src="album/album 8.jpg" alt=""></div>
+            <div class="item" style="--position: 9" data-audio="music/song 9.mp3" data-title = "When Can I See You Again?" data-artist ="Owl City"><img src="album/album 9.jpg" alt=""></div>
+            <div class="item" style="--position: 10" data-audio="music/song 10.mp3" data-title = "Cincin" data-artist ="Hindia"><img src="album/album 10.jpg" alt=""></div>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
